@@ -175,7 +175,7 @@ export default function Sidebar() {
                             {buttons?.map((e, i) => {
                                 return <ListItem key={i} sx={{ gap: "1rem" }}>
                                     <ListItemButton
-                                        sx={[{position: "relative", left: "-6px"},{"&:hover": { borderRadius: "30px", backgroundColor: "#9898986e" },},]}
+                                        sx={[{position: "relative", left: "-6px"}]}
                                         onClick={() => handleComp(e)}>
                                         <ListItemIcon
                                             sx={[inbox_opened === true && e.name === "Inbox" ? red_color : ""]}
