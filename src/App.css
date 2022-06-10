@@ -1,0 +1,43 @@
+.from_input:focus,.to_input:focus,.subject_input:focus,.textarea_input:focus{
+  outline: none;
+}
+.from_input,.to_input,.subject_input{
+  border: none;
+  padding: 1rem;
+}
+input[type="text"]{
+  width:100%;
+  font-size:inherit;
+}
+.textarea_input{
+  /* overflow:scroll; */
+  padding-top:0.5rem ;
+  border:none !important;
+  resize: none;
+  font-size:20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input{
+  padding-right: 0rem !important;
+  min-width: 20px !important;
+  /* border-bottom: 0px solid inherit !important; */
+}
+.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input{
+  padding:0px !important;
+}
+.css-4u4t8f-MuiInputBase-root-MuiInput-root-MuiSelect-root:before,
+.css-4u4t8f-MuiInputBase-root-MuiInput-root-MuiSelect-root:after,
+.css-z6hwyu-MuiInputBase-root-MuiInput-root-MuiSelect-root:before,
+.css-z6hwyu-MuiInputBase-root-MuiInput-root-MuiSelect-root:after{
+  border-bottom: 0px !important;
+}
+
+
+
+@media (min-width:600px) {
+  .css-j1zt43{
+    width:100% !important;
+    margin-left: 5% !important;
+    margin-right: 15% !important;
+  }
+}
