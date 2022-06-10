@@ -25,10 +25,7 @@ input[type="text"]{
 .css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input{
   padding:0px !important;
 }
-.css-4u4t8f-MuiInputBase-root-MuiInput-root-MuiSelect-root:before,
-.css-4u4t8f-MuiInputBase-root-MuiInput-root-MuiSelect-root:after,
-.css-z6hwyu-MuiInputBase-root-MuiInput-root-MuiSelect-root:before,
-.css-z6hwyu-MuiInputBase-root-MuiInput-root-MuiSelect-root:after{
+.css-4u4t8f-MuiInputBase-root-MuiInput-root-MuiSelect-root:before,.css-4u4t8f-MuiInputBase-root-MuiInput-root-MuiSelect-root:after,.css-z6hwyu-MuiInputBase-root-MuiInput-root-MuiSelect-root:before,.css-z6hwyu-MuiInputBase-root-MuiInput-root-MuiSelect-root:after{
   border-bottom: 0px !important;
 }
 
