@@ -6,7 +6,11 @@ import jwt_decode from 'jwt-decode'
 
 export const Token_set=(response)=>async dispatch=>{
     try {
+<<<<<<< HEAD
         console.log(response)
+=======
+//         console.log(response)
+>>>>>>> cc1c146c524cdfe82b81765bd90fdd65674ae9e3
         window.localStorage.setItem('token',response)
         dispatch({
             type:ActionTypes.SET_TOKEN,

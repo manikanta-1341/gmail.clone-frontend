@@ -302,13 +302,23 @@ function InboxComp() {
                                             <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.subject}</Typography>
                                         </TableCell>
                                         <TableCell onClick={() => CardClick(e)}>
+<<<<<<< HEAD
                                             {console.log(e.Time,new Date().toUTCString())}
                                             {e.date === new Date().toUTCString().split(" ").filter((e, i) => i === 1 || i === 2).join(" ") ? <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{
+=======
+                                            {e.date === new Date().toUTCString().split(" ").filter((e, i) => i === 1 || i === 2).join(" ") ? <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>
+                                                {
+>>>>>>> cc1c146c524cdfe82b81765bd90fdd65674ae9e3
                                                 new Date(e.Time).toLocaleTimeString().split("").length === 11?
                                                     new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 5 && i != 6 && i !== 7)
                                                 :
                                                  new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 4 && i != 5 && i !== 6)
+<<<<<<< HEAD
 }</Typography> : <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.date}</Typography>}
+=======
+}
+                                                    </Typography> : <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.date}</Typography>}
+>>>>>>> cc1c146c524cdfe82b81765bd90fdd65674ae9e3
                                         </TableCell>
                                     </TableRow >
                                 })}
