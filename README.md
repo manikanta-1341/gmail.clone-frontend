@@ -1,10 +1,10 @@
 ## Demo Account For Testing
 
 ##   username:bb@gmail.com
-###  password:bbb@123
+password:bbb@123
 
 ##   username:cc@gmail.com
-###  password:ccc@123
+password:ccc@123
 
 ## Account Creation
 
