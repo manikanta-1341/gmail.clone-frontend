@@ -104,7 +104,12 @@ export default function SearchComp() {
                                     </Grid>
                                 </TableCell>
                                 <TableCell>
-                                    <Typography>{e.date} &nbsp; {e.Time}</Typography>
+                                    <Typography>{e.date} &nbsp; {
+                                                new Date(e.Time).toLocaleTimeString().split("").length === 11?
+                                                    new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 5 && i != 6 && i !== 7)
+                                                :
+                                                 new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 4 && i != 5 && i !== 6)
+}</Typography>
                                 </TableCell>
                             </TableRow>
                         })
@@ -119,7 +124,12 @@ export default function SearchComp() {
                                     <Typography>{e.subject}</Typography>
                                 </TableCell>
                                 <TableCell>
-                                    <Typography>{e.date} &nbsp; {e.Time}</Typography>
+                                    <Typography>{e.date} &nbsp; {
+                                                new Date(e.Time).toLocaleTimeString().split("").length === 11?
+                                                    new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 5 && i != 6 && i !== 7)
+                                                :
+                                                 new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 4 && i != 5 && i !== 6)
+}</Typography>
                                 </TableCell>
                             </TableRow>
                         })
@@ -141,7 +151,12 @@ export default function SearchComp() {
                                     </Grid>
                                 </TableCell>
                                 <TableCell>
-                                    <Typography>{e.date} &nbsp; {e.Time}</Typography>
+                                    <Typography>{e.date} &nbsp; {
+                                                new Date(e.Time).toLocaleTimeString().split("").length === 11?
+                                                    new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 5 && i != 6 && i !== 7)
+                                                :
+                                                 new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 4 && i != 5 && i !== 6)
+}</Typography>
                                 </TableCell>
                             </TableRow>
                         })

@@ -48,6 +48,7 @@ export default function SignIn() {
                 username: e.email,
                 password: e.password
             }) 
+            console.log(response)
             if (!response.data.msg) {
                 
                 dispatch(Token_set(response.data))
