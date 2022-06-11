@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardActions, Checkbox, Avatar, Typography, Table, TableBody, TableRow, TableCell, Box, Button } from "@mui/material";
-import { InfoOutlined} from '@mui/icons-material'
+import { InfoOutlined } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector, } from 'react-redux';
 import { ActionTypes } from '../constants/constants';
@@ -62,7 +62,7 @@ function DraftComp() {
         if (global_checkbox === true) {
 
             let dummyState = [...checked]
-             dummyState.filter((e) => e._id === _id).map((e) => e.checked = !e.checked)
+            dummyState.filter((e) => e._id === _id).map((e) => e.checked = !e.checked)
             setChecked([...dummyState])
             dispatch({ type: ActionTypes.DRAFTCHECKLIST, payload: dummyState })
 
@@ -70,7 +70,7 @@ function DraftComp() {
         else {
             let dummyState = [...checked]
             // console.log(_id)
-             dummyState.filter((e) => e._id === _id).map((e) => e.checked = !e.checked)
+            dummyState.filter((e) => e._id === _id).map((e) => e.checked = !e.checked)
             setChecked([...dummyState])
             dispatch({ type: ActionTypes.DRAFTCHECKLIST, payload: dummyState })
 
@@ -148,15 +148,15 @@ function DraftComp() {
                                             <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.to}</Typography>
                                         </TableCell>
                                         <TableCell onClick={() => CardClick(e)}>
-                                            <Typography sx={[e.read ==="no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.subject ? e.subject : "No Subject"}</Typography>
+                                            <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.subject ? e.subject : "No Subject"}</Typography>
                                         </TableCell>
                                         <TableCell onClick={() => CardClick(e)}>
                                             {e.date === new Date().toUTCString().split(" ").filter((e, i) => i === 1 || i === 2).join(" ") ? <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{
-                                                new Date(e.Time).toLocaleTimeString().split("").length === 11?
+                                                new Date(e.Time).toLocaleTimeString().split("").length === 11 ?
                                                     new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 5 && i != 6 && i !== 7)
-                                                :
-                                                 new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 4 && i != 5 && i !== 6)
-}</Typography> : <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.date}</Typography>}
+                                                    :
+                                                    new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 4 && i != 5 && i !== 6)
+                                            }</Typography> : <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.date}</Typography>}
                                         </TableCell>
                                     </TableRow >
                                 })}

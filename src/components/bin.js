@@ -1,11 +1,11 @@
-import { Box, Typography, Grid, Avatar,Table, TableBody, TableRow, TableCell, Checkbox } from "@mui/material";
-import { Delete , InfoOutlined } from "@mui/icons-material";
+import { Box, Typography, Grid, Avatar, Table, TableBody, TableRow, TableCell, Checkbox } from "@mui/material";
+import { Delete, InfoOutlined } from "@mui/icons-material";
 import { url } from '../apis/api'
 import jwt_decode from 'jwt-decode'
 import { useState, useEffect } from "react";
 
 import axios from 'axios';
-import { useDispatch, useSelector} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { ActionTypes } from '../constants/constants';
 
 export default function BinComp() {
@@ -91,7 +91,7 @@ export default function BinComp() {
             <Box sx={{ width: '100%' }}>
 
                 <>
-                    {bin_data.length>0 ?
+                    {bin_data.length > 0 ?
                         <Table>
                             <TableBody>
                                 {bin_data?.map((e, i) => {
@@ -137,24 +137,16 @@ export default function BinComp() {
                                             <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.subject}</Typography>
                                         </TableCell>
                                         <TableCell onClick={() => CardClick(e)}>
-<<<<<<< HEAD
-                                            {e.date === new Date().toUTCString().split(" ").filter((e, i) => i === 1 || i === 2).join(" ") ? <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{
-=======
                                             {e.date === new Date().toUTCString().split(" ").filter((e, i) => i === 1 || i === 2).join(" ") ? <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>
                                                 {
-                                                {
->>>>>>> cc1c146c524cdfe82b81765bd90fdd65674ae9e3
-                                                new Date(e.Time).toLocaleTimeString().split("").length === 11?
-                                                    new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 5 && i != 6 && i !== 7)
-                                                :
-                                                 new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 4 && i != 5 && i !== 6)
-<<<<<<< HEAD
-}</Typography> : <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.date}</Typography>}
-=======
-}
-                                            }
-</Typography> : <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.date}</Typography>}
->>>>>>> cc1c146c524cdfe82b81765bd90fdd65674ae9e3
+
+                                                    new Date(e.Time).toLocaleTimeString().split("").length === 11 ?
+                                                        new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 5 && i != 6 && i !== 7)
+                                                        :
+                                                        new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 4 && i != 5 && i !== 6)
+
+                                                }
+                                            </Typography> : <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.date}</Typography>}
                                         </TableCell>
                                     </TableRow >
                                 })}

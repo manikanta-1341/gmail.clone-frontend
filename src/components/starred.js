@@ -1,5 +1,5 @@
 import { Box, Typography, Table, TableBody, TableRow, TableCell, Checkbox, Avatar } from "@mui/material";
-import { Star, StarOutline , InfoOutlined} from "@mui/icons-material";
+import { Star, StarOutline, InfoOutlined } from "@mui/icons-material";
 import { url } from '../apis/api'
 import jwt_decode from 'jwt-decode'
 import { useState, useEffect } from "react";
@@ -165,11 +165,11 @@ export default function StarredComp() {
                                         </TableCell>
                                         <TableCell onClick={() => CardClick(e)}>
                                             {e.date === new Date().toUTCString().split(" ").filter((e, i) => i === 1 || i === 2).join(" ") ? <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{
-                                                new Date(e.Time).toLocaleTimeString().split("").length === 11?
+                                                new Date(e.Time).toLocaleTimeString().split("").length === 11 ?
                                                     new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 5 && i != 6 && i !== 7)
-                                                :
-                                                 new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 4 && i != 5 && i !== 6)
-}</Typography> : <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.date}</Typography>}
+                                                    :
+                                                    new Date(e.Time).toLocaleTimeString().split("").filter((e, i) => i != 4 && i != 5 && i !== 6)
+                                            }</Typography> : <Typography sx={[e.read === "no" ? { fontWeight: "bold" } : { fontWeight: 200 }, { cursor: "context-menu" },]}>{e.date}</Typography>}
                                         </TableCell>
                                     </TableRow >
                                 })}
